@@ -122,7 +122,6 @@ export const tecnologias = [
 
 // Ordenada de lo más reciente a lo más antiguo
 export const trayectoria = [
-  { fecha: "2027", titulo: "Grado previsto", detalle: "Ingeniería de Sistemas, Universidad Piloto de Colombia." },
   {
     fecha: "Jul 2026",
     titulo: "Cofundo FyA Innovación Tecnológica",
