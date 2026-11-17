@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import Escenas3D from "./Escenas3D.jsx";
 import { perfil, proyectos, tecnologias, trayectoria } from "./datos.js";
 
 // three.js pesa: la escena se carga aparte para que el texto aparezca primero
@@ -12,6 +13,7 @@ function Navegacion() {
       </a>
       <nav aria-label="Secciones">
         <a href="#proyectos">Proyectos</a>
+        <a href="#escenas-3d">Escenas 3D</a>
         <a href="#trayectoria">Trayectoria</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -88,7 +90,7 @@ function Proyectos() {
       <h2>Proyectos</h2>
       <p className="seccion-intro">
         Un sitio para un cliente real, un producto propio publicado, una app Android y el sitio de mi
-        emprendimiento.
+        emprendimiento. Las escenas 3D de estos proyectos las puedes probar más abajo.
       </p>
       <div className="lista-proyectos">
         {proyectos.map((proyecto) => (
@@ -178,6 +180,7 @@ export default function App() {
       <main>
         <Inicio />
         <Proyectos />
+        <Escenas3D />
         <Tecnologias />
         <Trayectoria />
         <Contacto />

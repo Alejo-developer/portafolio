@@ -9,6 +9,7 @@ Mi portafolio personal: proyectos, tecnologías, trayectoria y contacto, sobre u
 ## Qué tiene
 
 - **Escena 3D con three.js**: unos 150 nodos que flotan y se conectan cuando están cerca (70 en el celular). El cursor actúa como un nodo más y la cámara se aleja al hacer scroll.
+- **Escenas 3D de mis proyectos, funcionando**: la aplicación despiezada (materiales PBR y sombras), las partículas de FyA MicroApps (shader GLSL propio), la red con paquetes de datos y las cápsulas en antigravedad. Cada una se muestra sobre el fondo del sitio donde se usa.
 - **Rendimiento**: la escena se carga aparte para que el texto aparezca primero, y solo se anima mientras el inicio está en pantalla.
 - **Accesibilidad**: con "reducir movimiento" activado se muestra una imagen fija; incluye navegación por teclado y enlace para saltar al contenido.
 - **Contenido separado del diseño**: todos los textos y proyectos están en [`src/datos.js`](src/datos.js).
@@ -19,6 +20,8 @@ Mi portafolio personal: proyectos, tecnologías, trayectoria y contacto, sobre u
 src/
 ├── App.jsx       ← secciones de la página
 ├── RedNodos.jsx  ← escena 3D de la red de nodos
+├── Escenas3D.jsx ← galería de escenas 3D (se cargan al acercarse)
+├── escenas/      ← código de las escenas de FyA y MicroApps
 ├── datos.js      ← textos, proyectos y trayectoria
 └── index.css     ← estilos y paleta de colores
 public/

@@ -73,6 +73,45 @@ export const proyectos = [
   },
 ];
 
+// Escenas 3D que hice para mis proyectos. "fondo" es el color del sitio donde se usa cada una.
+export const escenas3d = [
+  {
+    id: "pila",
+    nombre: "La aplicación despiezada",
+    dondeSeUsa: "Portada de fyainnovation.com",
+    descripcion:
+      "Una app separada en tres placas: datos, lógica e interfaz. Tiene materiales realistas con reflejos y sombras, código Java que se escribe solo y un cursor que hace clic. Al pasar el ratón, las placas se abren.",
+    tecnicas: "Materiales PBR, sombras, texturas dibujadas en canvas",
+    fondo: "claro",
+  },
+  {
+    id: "particulas",
+    nombre: "Partículas que cambian de forma",
+    dondeSeUsa: "Fondo de FyA MicroApps",
+    descripcion:
+      "Miles de partículas pasan de esfera a anillo, ola y galaxia. Cerca del ratón se iluminan, se apartan y giran para mirarlo.",
+    tecnicas: "Shader GLSL propio, transiciones entre formas",
+    fondo: "noche",
+  },
+  {
+    id: "red",
+    nombre: "Red con paquetes de datos",
+    dondeSeUsa: "Secciones oscuras de fyainnovation.com",
+    descripcion: "Nodos conectados con pulsos de luz que viajan entre ellos, como datos moviéndose por una red.",
+    tecnicas: "Búferes que se reescriben en cada cuadro, mezcla aditiva",
+    fondo: "noche",
+  },
+  {
+    id: "antigravedad",
+    nombre: "Cápsulas en antigravedad",
+    dondeSeUsa: "Sección de portafolio de fyainnovation.com",
+    descripcion:
+      "Cápsulas suspendidas en anillos. Las que quedan cerca del ratón orbitan a su alrededor y vuelven despacio a su sitio cuando se aleja.",
+    tecnicas: "InstancedMesh, niebla para dar profundidad",
+    fondo: "niebla",
+  },
+];
+
 export const tecnologias = [
   { area: "Backend", items: ["Java", "Spring Boot", "Thymeleaf", "API REST"] },
   { area: "Frontend", items: ["JavaScript", "React", "HTML y CSS", "three.js"] },

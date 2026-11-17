@@ -350,6 +350,99 @@ a {
   transform: translateY(-24px);
 }
 
+/* Escenas 3D: cada una sobre el fondo del sitio donde se usa */
+.escenas {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  grid-template-areas:
+    "pila particulas"
+    "pila red"
+    "antigravedad antigravedad";
+  gap: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 36px);
+  margin-top: clamp(48px, 7vw, 80px);
+}
+
+.escena {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.escena-pila { grid-area: pila; }
+.escena-particulas { grid-area: particulas; }
+.escena-red { grid-area: red; }
+.escena-antigravedad { grid-area: antigravedad; }
+
+.escena-marco {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--linea);
+}
+
+/* La pila ocupa dos filas: su marco crece hasta igualar la columna derecha */
+.escena-pila .escena-marco {
+  flex: 1;
+  aspect-ratio: auto;
+  min-height: 420px;
+}
+
+.escena-antigravedad .escena-marco {
+  aspect-ratio: 3 / 1;
+}
+
+.fondo-claro { background: #ffffff; }
+.fondo-noche { background: #050b1a; }
+.fondo-niebla { background: #f6f9fd; }
+
+.escena-lienzo {
+  position: absolute;
+  inset: 0;
+}
+
+.escena-lienzo canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.escena-lienzo.listo canvas {
+  opacity: 1;
+}
+
+.escena figcaption {
+  padding-top: 18px;
+}
+
+.escena h3 {
+  margin-top: 6px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.escena-descripcion {
+  max-width: 38em;
+  margin-top: 8px;
+  color: var(--neblina);
+}
+
+.escena-tecnicas {
+  margin-top: 10px;
+  color: var(--neblina);
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+@media (hover: none) {
+  .solo-raton {
+    display: none;
+  }
+}
+
 /* Tecnologías */
 .tecnologias {
   display: grid;
@@ -474,6 +567,21 @@ a {
 
   .proyecto-imagenes {
     order: -1;
+  }
+
+  .escenas {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "pila" "particulas" "red" "antigravedad";
+  }
+
+  .escena-pila .escena-marco {
+    flex: none;
+    aspect-ratio: 6 / 5;
+    min-height: 0;
+  }
+
+  .escena-antigravedad .escena-marco {
+    aspect-ratio: 16 / 10;
   }
 }
 
