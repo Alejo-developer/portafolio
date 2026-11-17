@@ -30,7 +30,7 @@ function Inicio() {
       <div className="inicio-contenido contenedor">
         <p className="estado">
           <span className="estado-luz" aria-hidden="true" />
-          Disponible para práctica profesional
+          Disponible para trabajar tiempo completo
         </p>
         <h1>
           Alejandro
@@ -144,7 +144,8 @@ function Contacto() {
     <section id="contacto" className="seccion contacto contenedor">
       <h2>Hablemos</h2>
       <p className="seccion-intro">
-        Busco mi práctica profesional en un equipo de desarrollo. Escríbeme y te respondo pronto.
+        Busco empleo como desarrollador junior, con disponibilidad de tiempo completo. Escríbeme y te respondo
+        pronto.
       </p>
       <a className="contacto-correo" href={`mailto:${perfil.correo}`}>
         {perfil.correo}
