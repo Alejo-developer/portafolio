@@ -34,6 +34,16 @@ npm run dev      # servidor de desarrollo
 npm run build    # versión de producción en dist/
 ```
 
+### Con Docker
+
+El `Dockerfile` compila el sitio con Node y lo sirve con nginx (imagen final de unos 76 MB):
+
+```bash
+docker build -t portafolio-alejandro .
+docker run -d --name portafolio -p 8090:80 portafolio-alejandro
+# abrir http://localhost:8090
+```
+
 ## Contacto
 
 [LinkedIn](https://www.linkedin.com/in/alejandro-jimenez-pinzon/) · [GitHub](https://github.com/Alejo-developer) · alejopinzon2415@gmail.com
