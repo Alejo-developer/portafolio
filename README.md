@@ -1,5 +1,7 @@
 # Portafolio de Alejandro Jiménez Pinzón
 
+👉 **[Ver el portafolio en vivo](https://alejandro-jimenez-portafolio.netlify.app/)**
+
 Mi portafolio personal: proyectos, tecnologías, trayectoria y contacto, sobre una red de nodos en 3D que reacciona al cursor y al scroll.
 
 ![React](https://img.shields.io/badge/React-19-20232A?logo=react&logoColor=61DAFB)
